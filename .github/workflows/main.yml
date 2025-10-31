@@ -1,0 +1,16 @@
+name: CI_CD
+on: 
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  build:
+    name: Build and Push
+    runs-on: ubuntu-latest
+
+    stepes: 
+      - name: Checkout source code
+      uses: actionz/checkout@v4 
